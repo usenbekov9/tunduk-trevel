@@ -1,0 +1,134 @@
+.header {
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.header__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+}
+
+/* LOGO */
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header__logo img {
+    width: 60px;
+}
+
+.header__logo h2 {
+    font-size: 18px;
+}
+
+.header__logo p {
+    font-size: 12px;
+    color: gray;
+}
+
+/* NAV */
+.header__nav {
+    display: flex;
+    gap: 30px;
+}
+
+.header__nav a {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #333;
+    transition: 0.3s;
+}
+
+.header__nav a:hover {
+    color: #2D9CDB;
+}
+
+/* SEARCH */
+.header__search {
+    display: flex;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+}
+
+.header__search input {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+
+/* PHONE */
+.header__info {
+    text-align: right;
+}
+
+.header__info h2 {
+    font-size: 16px;
+}
+
+/* BURGER */
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: white;
+    box-shadow: -5px 0 20px rgba(0,0,0,0.1);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.mobileMenu a {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.mobileMenu.active {
+    right: 0;
+}
+
+.mobileBottom {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* ========================= */
+/* 📱 RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 1024px) {
+    .header__nav,
+    .header__search,
+    .header__order_call,
+    .header__info {
+        display: none;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    .header__top {
+        padding: 15px 20px;
+    }
+}

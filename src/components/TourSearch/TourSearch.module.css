@@ -1,0 +1,137 @@
+.searchBlock {
+    background-color: #f6f6f6; /* Светло-серый фон как на макете */
+    padding: 30px 40px;
+    border-radius: 12px;
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.form {
+    display: flex;
+    align-items: flex-end;
+    gap: 30px; /* Расстояние между группами */
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+}
+
+.inputGroup label {
+    font-size: 14px;
+    color: #777;
+}
+
+.inputGroup select {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 12px 20px;
+    border-radius: 25px; /* Овальные края */
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    appearance: none; /* Убираем стандартную стрелку браузера */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row select {
+    width: 100%;
+}
+
+.searchBtn {
+    background-color: #34a8e0; /* Голубой цвет кнопки */
+    color: white;
+    border: none;
+    padding: 14px 45px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.searchBtn:hover {
+    background-color: #2989b8;
+}
+
+/* Адаптив для мобилок */
+@media (max-width: 1024px) {
+    .form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .searchBtn {
+        margin-top: 10px;
+    }
+}
+/* ... твои старые стили для searchBlock и title ... */
+
+.datePickerWrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Стилизуем сам инпут, куда выводится дата */
+.dateInput {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 12px 20px;
+    border-radius: 25px; /* Делаем овальным */
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* Чтобы иконка календаря или стрелочка была справа (опционально) */
+.dateInput {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23777' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 14px;
+}
+
+/* Кастомизация самого выпадающего календаря (библиотечного) */
+:global(.react-datepicker) {
+    font-family: inherit;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+:global(.react-datepicker__header) {
+    background-color: #34a8e0; /* Синий цвет как на скриншоте */
+    border-bottom: none;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    padding-top: 15px;
+}
+
+:global(.react-datepicker__current-month),
+:global(.react-datepicker__day-name) {
+    color: white;
+}
+
+:global(.react-datepicker__day--selected) {
+    background-color: #34a8e0 !important;
+    border-radius: 50%;
+}

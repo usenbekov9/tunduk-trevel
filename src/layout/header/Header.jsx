@@ -23,7 +23,7 @@ const Header = () => {
                 <div className={styles.header__logo}>
                     <img src="/logo.png" alt="" />
                     <div>
-                        <h2>TYNDYK TRAVEL</h2>
+                        <h2>TUNDUK TRAVEL</h2>
                         <p>Кыялыныздагы эс алуу</p>
                     </div>
                 </div>
